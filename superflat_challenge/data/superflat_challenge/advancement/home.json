@@ -1,0 +1,37 @@
+{
+  "parent": "superflat_challenge:oak_sapling",
+  "display": {
+    "icon": {
+      "id": "minecraft:spruce_door"
+    },
+    "title": {
+      "text": "Home Sweet Home",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Craft and place a door to build your first shelter.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "door": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spruce_door"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

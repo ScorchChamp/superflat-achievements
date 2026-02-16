@@ -1,0 +1,30 @@
+{
+  "parent": "superflat_challenge:progression",
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_sword"
+    },
+    "title": {
+      "text": "Nether Threat",
+      "color": "red"
+    },
+    "description": {
+      "text": "Kill a zombified piglin.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "piglin": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:zombified_piglin"
+        }
+      }
+    }
+  }
+}

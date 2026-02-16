@@ -1,0 +1,25 @@
+{
+  "parent": "superflat_challenge:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:oak_log"
+    },
+    "title": {
+      "text": "Core Progression",
+      "color": "dark_green"
+    },
+    "description": {
+      "text": "Follow these tasks to make your way through the superflat taiga world.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

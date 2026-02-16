@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "Superflat Challenge",
+    "min_format": [82, 0],
+    "max_format": [125, 0]
+  }
+}

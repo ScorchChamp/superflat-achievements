@@ -1,0 +1,96 @@
+{
+  "parent": "superflat_challenge:all_wood_types",
+  "display": {
+    "icon": {
+      "id": "minecraft:crimson_stem"
+    },
+    "title": {
+      "text": "All Nether Woods",
+      "color": "dark_purple"
+    },
+    "description": {
+      "text": "Collect nether stem and hyphae variants.",
+      "color": "white"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "crimson_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_stem"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "warped_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:warped_stem"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "crimson_hyphae": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:crimson_hyphae"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "warped_hyphae": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:warped_hyphae"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crimson_stem"
+    ],
+    [
+      "warped_stem"
+    ],
+    [
+      "crimson_hyphae"
+    ],
+    [
+      "warped_hyphae"
+    ]
+  ]
+}

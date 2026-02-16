@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:spruce_sapling"
+    },
+    "title": {
+      "text": "Ultra Superflat Challenge",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Survive and conquer a superflat world. Follow the advancements to progress.",
+      "color": "white"
+    },
+    "background": "minecraft:block/grass_block_top",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "setup": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "superflat_challenge:farming",
+  "display": {
+    "icon": {
+      "id": "minecraft:emerald"
+    },
+    "title": {
+      "text": "Trading & Villagers",
+      "color": "dark_green"
+    },
+    "description": {
+      "text": "Engage with villagers and wandering traders for unique loot.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

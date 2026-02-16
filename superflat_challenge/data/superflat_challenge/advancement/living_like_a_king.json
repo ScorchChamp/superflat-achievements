@@ -1,0 +1,43 @@
+{
+  "parent": "superflat_challenge:all_hail_the_crown_of_destiny",
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_chestplate"
+    },
+    "title": {
+      "text": "Living Like a King",
+      "color": "gold"
+    },
+    "description": {
+      "text": "Wear a full set of golden armor.",
+      "color": "white"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "gold_set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "head": {
+              "items": "minecraft:golden_helmet"
+            },
+            "chest": {
+              "items": "minecraft:golden_chestplate"
+            },
+            "legs": {
+              "items": "minecraft:golden_leggings"
+            },
+            "feet": {
+              "items": "minecraft:golden_boots"
+            }
+          }
+        }
+      }
+    }
+  }
+}

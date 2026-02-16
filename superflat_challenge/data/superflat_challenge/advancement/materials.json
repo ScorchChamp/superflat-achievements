@@ -1,0 +1,25 @@
+{
+  "parent": "superflat_challenge:progression",
+  "display": {
+    "icon": {
+      "id": "minecraft:stone"
+    },
+    "title": {
+      "text": "Building & Materials",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Collect blocks, craft components and build infrastructure.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

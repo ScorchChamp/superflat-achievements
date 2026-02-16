@@ -1,0 +1,37 @@
+{
+  "parent": "superflat_challenge:stick_with_it",
+  "display": {
+    "icon": {
+      "id": "minecraft:observer"
+    },
+    "title": {
+      "text": "Flatland Engineer",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Build an observer and bring automation to your superflat world.",
+      "color": "white"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "observer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:observer"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "superflat_challenge:trading",
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_chestplate"
+    },
+    "title": {
+      "text": "Armor & Tools",
+      "color": "gray"
+    },
+    "description": {
+      "text": "Gear up with the best armor and essential materials.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "parent": "superflat_challenge:farming",
+  "display": {
+    "icon": {
+      "id": "minecraft:dirt"
+    },
+    "title": {
+      "text": "Grounded",
+      "color": "green"
+    },
+    "description": {
+      "text": "Collect 64 dirt.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "dirt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dirt"
+            ],
+            "count": {
+              "min": 64
+            }
+          }
+        ]
+      }
+    }
+  }
+}

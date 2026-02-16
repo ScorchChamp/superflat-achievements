@@ -1,0 +1,28 @@
+{
+  "parent": "superflat_challenge:build_nether_portal",
+  "display": {
+    "icon": {
+      "id": "minecraft:flint_and_steel"
+    },
+    "title": {
+      "text": "Into the Nether",
+      "color": "dark_red"
+    },
+    "description": {
+      "text": "Build and enter a nether portal.",
+      "color": "white"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_nether": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    }
+  }
+}

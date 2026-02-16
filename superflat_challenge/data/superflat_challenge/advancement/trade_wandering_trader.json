@@ -1,0 +1,30 @@
+{
+  "parent": "superflat_challenge:trade_villager",
+  "display": {
+    "icon": {
+      "id": "minecraft:lead"
+    },
+    "title": {
+      "text": "Roadside Commerce",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Trade with a wandering trader.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "trade": {
+      "trigger": "minecraft:villager_trade",
+      "conditions": {
+        "villager": {
+          "type": "minecraft:wandering_trader"
+        }
+      }
+    }
+  }
+}

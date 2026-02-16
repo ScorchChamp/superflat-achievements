@@ -1,0 +1,25 @@
+{
+  "parent": "superflat_challenge:materials",
+  "display": {
+    "icon": {
+      "id": "minecraft:wheat_seeds"
+    },
+    "title": {
+      "text": "Farming & Food",
+      "color": "yellow"
+    },
+    "description": {
+      "text": "Grow crops, raise animals and keep yourself fed.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "start": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

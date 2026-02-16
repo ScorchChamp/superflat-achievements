@@ -1,0 +1,40 @@
+{
+  "parent": "superflat_challenge:bucket",
+  "display": {
+    "icon": {
+      "id": "minecraft:water_bucket"
+    },
+    "title": {
+      "text": "Water Works",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Collect a bucket of water — essential for farming and obsidian.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "water_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:water_bucket"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "superflat_challenge:rewards/water_bucket"
+  }
+}

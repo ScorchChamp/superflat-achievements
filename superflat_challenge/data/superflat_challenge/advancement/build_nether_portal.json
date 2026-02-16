@@ -1,0 +1,60 @@
+{
+  "parent": "superflat_challenge:two_lava_buckets",
+  "display": {
+    "icon": {
+      "id": "minecraft:obsidian"
+    },
+    "title": {
+      "text": "Frame the Nether",
+      "color": "dark_red"
+    },
+    "description": {
+      "text": "Prepare materials to build a Nether portal.",
+      "color": "white"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "obsidian": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:obsidian"
+            ],
+            "count": {
+              "min": 10
+            }
+          }
+        ]
+      }
+    },
+    "ignite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:flint_and_steel"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obsidian"
+    ],
+    [
+      "ignite"
+    ]
+  ]
+}

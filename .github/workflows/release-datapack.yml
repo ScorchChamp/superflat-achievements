@@ -1,0 +1,62 @@
+name: Release Datapack
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  MC_VERSION: 1.21.11
+  DATAPACK_DIR: superflat_challenge
+  ZIP_BASENAME: ultra_superflat_challenge
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync MC version into pack.mcmeta
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          mc_version = os.environ["MC_VERSION"]
+          pack_path = Path(os.environ["DATAPACK_DIR"]) / "pack.mcmeta"
+
+          data = json.loads(pack_path.read_text(encoding="utf-8"))
+          pack = data.setdefault("pack", {})
+          description = pack.get("description", "Ultra Superflat Challenge")
+          description = re.sub(r"\s*\(MC\s+[0-9.]+\)\s*$", "", description)
+          pack["description"] = f"{description} (MC {mc_version})"
+
+          pack_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+          print(f"Updated {pack_path} with MC version {mc_version}")
+          PY
+
+      - name: Build zip artifact
+        id: build
+        run: |
+          zip_name="${{ env.ZIP_BASENAME }}-mc${{ env.MC_VERSION }}.zip"
+          cd "${{ env.DATAPACK_DIR }}"
+          zip -r "../${zip_name}" .
+          echo "zip_name=${zip_name}" >> "$GITHUB_OUTPUT"
+
+      - name: Publish GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: auto-${{ github.run_number }}
+          name: Automated Datapack Release #${{ github.run_number }}
+          artifacts: ${{ steps.build.outputs.zip_name }}
+          generateReleaseNotes: true
+          allowUpdates: false

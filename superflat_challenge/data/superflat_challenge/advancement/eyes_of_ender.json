@@ -1,0 +1,40 @@
+{
+  "parent": "superflat_challenge:ender_pearls",
+  "display": {
+    "icon": {
+      "id": "minecraft:eye_of_ender"
+    },
+    "title": {
+      "text": "Eyes on the Prize",
+      "color": "dark_purple"
+    },
+    "description": {
+      "text": "Collect 12 Eyes of Ender to prepare the End portal.",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "eyes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:eye_of_ender"
+            ],
+            "count": {
+              "min": 12
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "superflat_challenge:rewards/eyes_of_ender"
+  }
+}

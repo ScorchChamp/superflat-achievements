@@ -1,0 +1,25 @@
+{
+  "parent": "superflat_challenge:golden_apple",
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_apple"
+    },
+    "title": {
+      "text": "Doctor Is In",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Cure a zombie villager.",
+      "color": "white"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "cured": {
+      "trigger": "minecraft:cured_zombie_villager"
+    }
+  }
+}
